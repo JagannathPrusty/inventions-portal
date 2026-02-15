@@ -1,0 +1,144 @@
+/* ===========================
+   AUTH PAGE (LOGIN / SIGNUP)
+=========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #000814, #001d3d);
+  color: #fff;
+}
+
+/* ===== Container ===== */
+.auth-container {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px 50px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 198, 255, 0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* ===== Headings ===== */
+.auth-container h2 {
+  color: #00c6ff;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.auth-container p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+/* ===== Input Fields ===== */
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #444;
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-group label {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  font-size: 1rem;
+  color: #aaa;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+
+.input-group input:focus {
+  border-bottom-color: #00c6ff;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+  top: -10px;
+  font-size: 0.8rem;
+  color: #00c6ff;
+}
+
+/* ===== Button ===== */
+.btn {
+  width: 100%;
+  background: linear-gradient(45deg, #00c6ff, #0072ff);
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 12px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: linear-gradient(45deg, #0072ff, #00c6ff);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 198, 255, 0.4);
+}
+
+/* ===== Switch Link ===== */
+.switch-text {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.switch-text a {
+  color: #00c6ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.switch-text a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 30px 25px;
+  }
+
+  .auth-container h2 {
+    font-size: 1.6rem;
+  }
+}
